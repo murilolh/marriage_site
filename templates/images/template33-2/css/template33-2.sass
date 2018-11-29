@@ -1,0 +1,185 @@
+@import url("//fonts.icasei.com.br/fonts.css?use=opensans-regular-icasei");
+@import url("//fonts.icasei.com.br/fonts.css?use=opensans-light-icasei");
+@import url("//fonts.icasei.com.br/fonts.css?use=pathwaygothicone-icasei");
+@import url("//fonts.icasei.com.br/fonts.css?use=didot-icasei");
+
+
+@if $nome_topo_fonte_alias != "" {
+	@import url('//fonts.icasei.com.br/fonts.css?use=#{$nome_topo_fonte_alias}');
+}
+
+@if $titulos_fonte_alias != "" {
+	@import url('//fonts.icasei.com.br/fonts.css?use=#{$titulos_fonte_alias}');
+}
+
+@if $menu_fonte_alias != "" {
+	@import url('//fonts.icasei.com.br/fonts.css?use=#{$menu_fonte_alias}');
+}
+
+@if $textos_fonte_alias != "" {
+	@import url('//fonts.icasei.com.br/fonts.css?use=#{$textos_fonte_alias}');
+}
+
+/*Custom Template 33*/
+.datedays:after, .def-title, #middle .template-messages .def-messages .def-message .msg-from{color:$titulos_cor;}
+.light .kenburn-bg, .dark .kenburn-bg{border:none!important;}
+/*Custom Template 33*/
+
+/*BOTOES*/
+.def-button{color:$titulos_cor; border-color:$titulos_cor;}
+.def-button:hover{color:#fff; background-color:$titulos_cor; border:1px solid $titulos_cor;}
+
+
+/*Criando padronizações*/
+/*Largura padrao do site*/
+#header-cont, #middle-cont, #page-protected, #menu {width:940px;}
+#footer-cont #powered, #footer-cont{width:940px; padding:0;}
+.days-wrap{background:url(/assets/templates/commun/folhas.png) no-repeat 50% 50% $titulos_cor;}
+
+/*Noivos Fonte + Cor Nome Header*/
+#header h1, .def-text h1, .def-text h2, .def-text h3, .def-text h4, .def-text h5, .def-text h6{
+	font-family:$nome_topo_fonte_family, Arial, Helvetica, sans-serif;
+}
+#header h1, #header #days, #header #date, #days-after, .datedays {
+	color: $nome_topo_cor;
+}
+
+/* Enquete / Messages / Box */
+#enquete, .def-messages div.def-message, #middle .def-list-box, #middle .def-blog-post .def-post-footer a, .def-comments .def-message {background-color:scale-color($fundo_cor, $alpha: -50%); padding-bottom: 1px;}
+#middle .template-bestman .def-godp-text .def-godp-title{color:$titulos_cor;}
+
+.def-message .answer-message {
+	margin-top: 10px !important;
+}
+	
+/* hr */
+#middle .def-blog-post .def-post-footer{
+	border-top:1px solid scale-color($textos_cor, $alpha: -60%)!important;
+}
+
+/* Menu Fonte + Cor Links*/
+#menu a {
+	font-family: $menu_fonte_family, Arial, Helvetica, sans-serif;
+}
+#menu a, .def-link {
+	color: $menu_cor;
+}
+
+/*Fonte + Cor Títulos = Cor Botões*/
+.def-title {
+	font-family:$titulos_fonte_family, Arial, Helvetica, sans-serif;
+}
+
+/*BOTOES */
+.def-button, .def-bg {
+	color: $titulos_cor;
+	border-color: $titulos_cor;
+}
+
+.def-button:hover, .def-text a.def-button:hover, .def-button.active, #list-loja .catg-products-list li .cpl-btn .def-button  {
+	color: #FFF;
+	background-color: $titulos_cor;
+	border-color: $titulos_cor;
+}
+
+.enquete-results-bar {
+	background-color: $titulos_cor;
+}
+
+
+/* BLOG */
+.def-message .msg-text .msg-arrow {border-bottom:10px solid scale-color($titulos_cor, $alpha: -85%)!important;}
+
+
+/*Textos gerais*/
+body, .def-text, #page-store, #page, #middle .template-bestman .def-title.godparents, .def-godp-title, .def-blog-post .def-title, .def-blog-post .def-blog-date, #page-store .def-text {font-family: $textos_fonte_family, Arial, Helvetica, sans-serif;}
+
+#page, .def-title.godparents, .def-post-footer, .def-post-footer a, a {
+	color: $textos_cor;
+}
+#footer, #footer a{color:$nome_topo_cor;}
+
+#middle .template-bestman .def-godp-text img, #list-loja .catg-products-list li {
+	border: 1px solid scale-color($textos_cor, $alpha: -60%);
+}
+.def-album-box ul li a {border: 1px solid $textos_cor;}
+.step-by-step .step-1, .step-by-step .step-2, .step-by-step .step-3 {border-right: 1px solid scale-color($textos_cor, $alpha: -60%);}
+
+#footer-cont #visit{background-color:$titulos-cor!important;}
+#footer a, #footer-cont #powered .pwrd{color:$textos_cor!important;}
+/*Store*/
+#list-loja{
+	.catg-products-list li {background-color: scale-color(#FFF, $alpha: -50%)!important;}
+	.catg-products-list li:hover {background-color: scale-color(#FFF, $alpha: -20%)!important;}
+}
+
+#sort-store .sort-option .sort-wrap {border: 1px solid scale-color($textos_cor, $alpha: -50%)!important;}
+#sort-store, .step-by-step {border: 1px solid scale-color($textos_cor, $alpha: -50%)!important;}
+#list-loja .catg-products-list li:hover {border: 1px solid $textos_cor;}
+
+.cart .cart-receiver, .step-by-step .active, .step-by-step .step-ok:hover {background-color: scale-color(#FFF, $alpha: -30%)!important;}
+.cart .cart-table td {border-bottom: 1px solid scale-color($titulos_cor, $alpha: -94%);}
+.cart-paymet-help, .cart-conf-wrap {background-color: scale-color(#FFF, $alpha: -40%)!important;}
+.cart-conf-boleto, .cart-conf-deposito, .cart-conf-card, .cart-conf-wrap .cart-table, .cart-conf-wrap .cart-table td  {border: 1px solid $textos_cor;}
+
+#custom-bg {
+	@if $fundo_imagem != "" {
+			background:url('/userfiles/#{$login1}/#{$login}/imagens/#{$fundo_imagem}') no-repeat center fixed $fundo_cor;
+			background-size: cover;
+			filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/userfiles/#{$login1}/#{$login}/imagens/#{$fundo_imagem}', sizingMethod='scale');
+			-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/userfiles/#{$login1}/#{$login}/imagens/#{$fundo_imagem}', sizingMethod='scale')";
+	} @else if $fundo_pattern != "" {
+		background:url('/assets/templates/pattern/#{$fundo_pattern}') repeat center fixed $fundo_cor;
+	} @else {
+		background-color: $fundo_cor;
+	}
+}
+
+#header-cont h1 span{border-top:1px solid $titulos_cor; border-bottom:1px solid $titulos_cor;}
+#header-cont #date, #header-cont #days{color: $titulos_cor;}
+
+/* LOADER */
+body > div.global-loading > div.global-loading-progress {background-color:scale-color(#000, $alpha: -10%); border:0px!important; }
+body > div.global-loading { position: fixed; top: 0; left: 0; display: none; z-index: 2000; background-color: scale-color(#000000, $alpha: -80%);}
+
+/* Imagem do Uploader */
+#custom-foto25{border:1px solid $titulos_cor;}
+
+
+.datedays:after, .def-title, #middle .template-messages .def-messages .def-message .msg-from, .date-wrap{color:$titulos_cor;}
+
+#menu ul li .menu-social a{background-color:$nome_topo_cor;}
+#menu ul li.select a {color:$titulos_cor;}
+#menu li .menu-social a{background-color:$titulos_cor!important;}
+
+/*Mobile*/
+
+@media screen and (max-width:640px) {
+	#menu, #menu ul{background:$titulos_cor;}
+	#header-cont h1 span.l::after {
+		content:'#{$letra2}';
+		margin-left: -39px;
+	}
+	#header-cont h1 span.r::before {
+		content:'#{$letra1}';
+		margin-left: 9px;
+
+	}
+	#header-cont h1 span.l::after, #header-cont h1 span.r::before{
+		visibility: visible;
+		font-size:33px;
+
+		position:absolute;
+	}
+	#menu ul li.select{border-left:4px solid $titulos_cor;}
+}
+
+#page .def-image img, .def-location .def-map, .formhelper-default .label-erro input[type="text"], .formhelper-default .label-erro input,.formhelper-default .label-erro .fcs-out[type="text"], .formhelper-default .fcs-out, .fcs-over{border:1px solid scale-color($textos_cor, $alpha: -74%)!important;}
+
+/* UPLOADER ROSTO */
+#custom-foto25 div{
+	@if $custom_param1 == "exemploCasal.jpg" {
+			background:url('/assets/templates/commun/#{$custom_param1}') no-repeat 50% 4px #fff;}
+	@else if  $custom_param1 != "" {
+			background:url('/images/thumb/1/1/public/300/300/0/0/0/#{$custom_param1_X}/#{$custom_param1_Y}/1/#{$login1}/#{$login}/imagens/#{$custom_param1}') 50% 4px no-repeat #fff;}
+}

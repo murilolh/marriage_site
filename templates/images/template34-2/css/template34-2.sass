@@ -1,0 +1,121 @@
+@import url("//fonts.icasei.com.br/fonts.css?use=lustria-icasei");
+@import url("//fonts.icasei.com.br/fonts.css?use=opensans-light-icasei");
+@import url("//fonts.icasei.com.br/fonts.css?use=opensans-bold-icasei");
+
+
+@if $nome_topo_fonte_alias != "" {
+	@import url('//fonts.icasei.com.br/fonts.css?use=#{$nome_topo_fonte_alias}');
+}
+
+@if $titulos_fonte_alias != "" {
+	@import url('//fonts.icasei.com.br/fonts.css?use=#{$titulos_fonte_alias}');
+}
+
+@if $menu_fonte_alias != "" {
+	@import url('//fonts.icasei.com.br/fonts.css?use=#{$menu_fonte_alias}');
+}
+
+@if $textos_fonte_alias != "" {
+	@import url('//fonts.icasei.com.br/fonts.css?use=#{$textos_fonte_alias}');
+}
+
+/*Fontes*/
+#header h1, .def-text h1, .def-text h2, .def-text h3, .def-text h4, .def-text h5, .def-text h6, .def-text, #header-cont .datedays, #middle .template-bestman .def-godp-text .def-godp-title, .custom-header::before, .custom-header::after, .def-blog-date{font-family: $nome_topo_fonte_family, Arial, Helvetica, sans-serif;}
+.def-title{font-family: $titulos_fonte_family, Arial, Helvetica, sans-serif;}
+body, #menu a, .def-text p, #middle .template-bestman .def-godp-right .def-godp-text, #middle .template-bestman .def-godp-text, #page .formhelper-default, #page .formhelper-default input, .def-rsvp .rsvp-line .cdst-line-label strong, .formhelper-default .cdst-inpt, body, .def-result-message.error{font-family:$textos_fonte_family, Arial, Helvetica, sans-serif;}
+#header h1, #header #days, #days-after, #header-cont #date, #header-cont #days {
+	color: $nome_topo_cor;
+}
+.days-wrap, #middle .template-messages .def-messages .def-message .msg-from, #middle .template-bestman .def-godp-text .def-godp-title {
+	color: $titulos_cor;
+}
+
+/* hr */
+#middle .template-bestman .def-godp-text .def-godp-title{
+	border-bottom: 1px solid scale-color($menu_cor, $alpha: -60%)!important;
+}
+
+/* box + border img */
+.def-album-box ul li a {
+	border: 1px solid scale-color($menu_cor, $alpha: 1%)!important;
+}
+
+
+/* Menu Fonte + Cor Links*/
+#menu a {
+	font-family: $menu_fonte_family, Arial, Helvetica, sans-serif;
+}
+#menu a, .def-link {
+	color: $menu_cor;
+}
+
+.def-title, .def-text a, .def-text h1, #menu ul li.active a, .breadcrumb-btn, .def-color, .cart-conf-boleto:hover {
+	color: $titulos_cor;
+}
+.def-button, .def-bg, .enquete-results-bar {
+	background-color: $titulos_cor;
+}
+
+
+
+/*Textos gerais*/
+.def-text, #page-store, #page {
+	font-family: $textos_fonte_family, Arial, Helvetica, sans-serif;
+}
+#page {
+	color: $textos_cor;
+}
+
+/*Store*/
+#list-loja .catg-products-list li {background-color: scale-color(#FFF, $alpha: -50%)!important; border: 1px solid scale-color($titulos_cor, $alpha: -85%)!important;}
+#list-loja .catg-products-list li:hover {background-color: scale-color(#FFF, $alpha: -20%)!important; border: 1px solid scale-color($titulos_cor, $alpha: -55%)!important;}
+#sort-store .sort-option .sort-wrap:hover, #sort-store .sort-option .sort-wrap.active {border: 1px solid scale-color($titulos_cor, $alpha: -78%)!important;}
+.cart .cart-receiver, .step-by-step .active, .step-by-step .step-ok:hover {background-color: scale-color(#FFF, $alpha: -30%)!important;}
+.cart .cart-table td {border-bottom: 1px solid scale-color($titulos_cor, $alpha: -94%);}
+.step-by-step .step-1, .step-by-step .step-2, .step-by-step .step-3, .step-by-step .step-4 {background: scale-color($titulos_cor, $alpha: -75%);}
+.cart-paymet-help, .cart-conf-wrap {background-color: scale-color(#FFF, $alpha: -40%)!important;}
+.cart-conf-boleto, .cart-conf-deposito, .cart-conf-card, .cart-conf-wrap .cart-table, .cart-conf-wrap .cart-table td  {border: 1px solid scale-color($titulos_cor, $alpha: -72%);}
+
+
+/*Textura/imagem Fundo + Cor Fundo*/
+
+#custom-bg {
+	@if $fundo_imagem != "" {
+			background:url('/userfiles/#{$login1}/#{$login}/imagens/#{$fundo_imagem}') no-repeat center fixed $fundo_cor;
+			background-size: cover;
+			filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/userfiles/#{$login1}/#{$login}/imagens/#{$fundo_imagem}', sizingMethod='scale');
+			-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/userfiles/#{$login1}/#{$login}/imagens/#{$fundo_imagem}', sizingMethod='scale')";
+	} @else if $fundo_pattern != "" {
+		background:url('/assets/templates/pattern/#{$fundo_pattern}') repeat center fixed $fundo_cor;
+	} @else {
+		background-color: $fundo_cor;
+	}
+}
+
+/* LOADER */
+body > div.global-loading > div.global-loading-progress {background-color:scale-color(#000000, $alpha: -10%); border:0px!important; }
+body > div.global-loading { position: fixed; top: 0; left: 0; display: none; z-index: 2000; background-color: scale-color(#000000, $alpha: -80%);}
+
+div#menu ul li .menu-social a{background:url(/assets/templates/svg/SocialIcons.svg) no-repeat!important;}
+div#menu ul li .menu-social a, #footer-cont #visit{background-color:scale-color(#000000, $alpha: -80%)!important;}
+
+/* Imagem do Uploader */
+#header{border-bottom:1px solid adjust-color($nome_topo_cor, $lightness: 40%);}
+#footer{background:$titulos_cor;}
+
+/*Mobile*/
+@media screen and (max-width:640px) {
+	#menu, #menu ul{background:$titulos_cor;}
+}
+
+/* UPLOADER ROSTO */
+#custom-foto25 div{
+	@if $custom_param1 == "exemplo34-2.jpg" {
+			background:url('/assets/templates/commun/#{$custom_param1}') no-repeat 50% 4px #fff;}
+	@else if  $custom_param1 != "" {
+			background:url('/images/thumb/1/1/public/300/300/0/0/0/#{$custom_param1_X}/#{$custom_param1_Y}/1/#{$login1}/#{$login}/imagens/#{$custom_param1}') 50% 4px no-repeat #fff;}
+}
+
+/* UPLOADER FUNDO HEADER HORIZONTAL BLUR */
+#header{background: url(/templates/images/template34-2/bgExemplo34_2.jpg) repeat 0 center;}
+

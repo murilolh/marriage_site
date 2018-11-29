@@ -1,0 +1,164 @@
+@import url("//fonts.icasei.com.br/fonts.css?use=opensans-regular-icasei");
+@import url("//fonts.icasei.com.br/fonts.css?use=opensans-light-icasei");
+@import url("//fonts.icasei.com.br/fonts.css?use=nymphette-icasei");
+@import url("//fonts.icasei.com.br/fonts.css?use=lustria-icasei");
+@import url("//fonts.icasei.com.br/fonts.css?use=icaseilib_icasei");
+
+
+@if $nome_topo_fonte_alias != "" {
+	@import url('//fonts.icasei.com.br/fonts.css?use=#{$nome_topo_fonte_alias}');
+}
+
+@if $titulos_fonte_alias != "" {
+	@import url('//fonts.icasei.com.br/fonts.css?use=#{$titulos_fonte_alias}');
+}
+
+@if $menu_fonte_alias != "" {
+	@import url('//fonts.icasei.com.br/fonts.css?use=#{$menu_fonte_alias}');
+}
+
+@if $textos_fonte_alias != "" {
+	@import url('//fonts.icasei.com.br/fonts.css?use=#{$textos_fonte_alias}');
+}
+
+/*menu*/
+label.open-menu-rsp{border-radius:4px; background-color:scale-color(#fff, $alpha: -70%) }
+
+/*Criando padronizações*/
+#page .def-image img, .def-location .def-map{border:1px solid $textos_cor;}
+
+/*Largura padrao do site*/
+#footer-cont, #footer-cont #powered, #header-cont, #middle-cont, #page-protected, #menu {width:940px;}
+
+/*Noivos Fonte + Cor Nome Header*/
+#header h1, .def-text h1, .def-text h2, .def-text h3, .def-text h4, .def-text h5, .def-text h6, .def-title {
+	font-family:$nome_topo_fonte_family, Arial, Helvetica, sans-serif;
+}
+.def-location .def-title{font-family: $textos_fonte_family, Arial, Helvetica, sans-serif;}
+#header h1, #header #days, #header #date, #days-after, .datedays {
+	color: $nome_topo_cor;
+}
+.formhelper-default .fcs-out, .fcs-over, .chzn-container-single .chzn-single, .chzn-container .chzn-drop{border:1px solid scale-color($textos_cor, $alpha: -55%)!important;}
+.chzn-container .chzn-drop{border-top: none!important;}
+
+/* Enquete / Messages / Box */
+#enquete, .def-messages div.def-message, #middle .def-list-box, .def-comments .def-message {background-color:scale-color($textos_cor, $alpha: -85%); padding-bottom: 1px;}
+
+.def-message .answer-message {
+	margin-top: 10px !important;
+}
+/* hr */
+#middle .def-blog-post .def-post-footer {
+	border-top:1px solid scale-color($textos_cor, $alpha: -60%)!important;
+}
+
+/* Menu Fonte + Cor Links*/
+#menu a {
+	font-family: $menu_fonte_family, Arial, Helvetica, sans-serif;
+}
+#menu a, .def-link {
+	color: $menu_cor;
+}
+
+/*Fonte + Cor Títulos = Cor Botões*/
+#header #date, #header #days, #days-after {
+	font-family: $titulos_fonte_family, Arial, Helvetica, sans-serif;
+}
+
+ /*BOTOES*/
+.def-button, .def-bg {
+	color: $titulos_cor;
+	border-color: $titulos_cor;
+}
+
+#page-store{
+	.def-button, .def-bg{
+		color: #fff;
+		border-color: $textos_cor;
+		background-color: $textos_cor;
+	}
+	.def-button:hover, .def-bg:hover{
+		color:$textos_cor;
+		border:1px solid $textos_cor;
+		background-color:#fff!important;
+		.ico-buy{background-position: -45px -21px!important;}
+	}
+	.step-num.def-bg, .step-by-step .step-label{background-color:transparent; color:$titulos_cor; font-size:16px; font-weight:normal!important;}
+	.ico-buy{background-position: -45px -3px;}
+}
+
+.def-button:hover, .def-text a.def-button:hover, .def-button.active  {
+	color: #FFF;
+	background-color: $titulos_cor;
+	border-color: $titulos_cor;
+}
+.def-button:hover{background-color: $titulos_cor!important;}
+
+.enquete-results-bar, .days-wrap, body.pt_br #married, body.en #married, body.es #married {
+	background-color: $titulos_cor!important;
+}
+
+
+/* BLOG */
+.def-message .msg-text .msg-arrow {border-bottom:10px solid scale-color($titulos_cor, $alpha: -85%)!important;}
+
+/* Padrinhos */
+#middle .template-bestman .def-godp-text .def-godp-title{color:$titulos_cor;}
+
+
+/*Textos gerais*/
+.def-text, #page-store, #page, #middle .template-bestman .def-title.godparents, .def-godp-title, .def-blog-post .def-title, .def-blog-post .def-blog-date, #page-store .def-text {
+	font-family: $textos_fonte_family, Arial, Helvetica, sans-serif;
+}
+#page, .def-title.godparents, .def-post-footer, .def-post-footer a, a {
+	color: $textos_cor;
+}
+#footer, #footer a{color:#fff;}
+
+#middle .template-bestman .def-godp-text img, #list-loja .catg-products-list li {
+	border: 1px solid $textos_cor;
+}
+.def-album-box ul li a {border: 1px solid $textos_cor;}
+.step-by-step .step-1, .step-by-step .step-2, .step-by-step .step-3 {border-right: 1px solid scale-color($textos_cor, $alpha: -60%);}
+
+div#menu ul li .menu-social a, #footer-cont #visit {background-color:$nome_topo_cor!important;}
+
+/*Store*/
+#list-loja{
+	.catg-products-list li {background-color: scale-color(#FFF, $alpha: -50%)!important;}
+	.catg-products-list li:hover {background-color: scale-color(#FFF, $alpha: -20%)!important;}
+}
+
+#sort-store .sort-option .sort-wrap {border: 1px solid scale-color($textos_cor, $alpha: -5%)!important;}
+#sort-store, .step-by-step {border: 1px solid scale-color($textos_cor, $alpha: -50%)!important;}
+#list-loja .catg-products-list li:hover {border: 1px solid $textos_cor;}
+
+.cart .cart-receiver, .step-by-step .active, .step-by-step .step-ok:hover {background-color: scale-color(#FFF, $alpha: -30%)!important;}
+.cart .cart-table td {border-bottom: 1px solid scale-color($textos_cor, $alpha: -94%);}
+.cart-paymet-help, .cart-conf-wrap {background-color: scale-color(#FFF, $alpha: -40%)!important;}
+.cart-conf-boleto, .cart-conf-deposito, .cart-conf-card, .cart-conf-wrap .cart-table, .cart-conf-wrap .cart-table td  {border: 1px solid scale-color($textos_cor, $alpha: -72%);}
+/*Textura/imagem Fundo + Cor Fundo*/
+
+
+#custom-bg {
+	@if $fundo_imagem != "" {
+			background:url('/userfiles/#{$login1}/#{$login}/imagens/#{$fundo_imagem}') no-repeat center fixed $fundo_cor;
+			background-size: cover;
+			filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/userfiles/#{$login1}/#{$login}/imagens/#{$fundo_imagem}', sizingMethod='scale');
+			-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/userfiles/#{$login1}/#{$login}/imagens/#{$fundo_imagem}', sizingMethod='scale')";
+	} @else if $fundo_pattern != "" {
+		background:url('/assets/templates/pattern/#{$fundo_pattern}') repeat center fixed $fundo_cor;
+	} @else {
+		background-color: $fundo_cor;
+	}
+}
+
+/* LOADER */
+body > div.global-loading > div.global-loading-progress {background-color:scale-color($nome_topo_cor, $alpha: 0%); border:0px!important; }
+body > div.global-loading { position: fixed; top: 0; left: 0; display: none; z-index: 2000; background-color: scale-color($nome_topo_cor, $alpha: -80%);}
+
+
+#menu ul{border:1px solid $textos_cor; border-right:none; border-left:none;}
+.datedays:after, .def-title, #middle .template-messages .def-messages .def-message .msg-from{color:$titulos_cor;}
+div#menu ul li .menu-social a{background-color:$nome_topo_cor;}
+#menu ul li.select a, .def-blog-date {color:$titulos_cor;}

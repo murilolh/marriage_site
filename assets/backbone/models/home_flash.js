@@ -1,0 +1,1 @@
+var HomeFlash=null;!function(){var local=null,localData=null;check_localstorage("data_home_flash")?local=new Backbone.LocalStorage("data_home_flash"):localData=new Backbone.LocalData("data_home_flash"),HomeFlash=Backbone.Model.extend({urlRoot:"/services/home_flash",idAttribute:"id_home_flash",localStorage:local,localData:localData,defaults:{},initialize:function(){}})}(jQuery);

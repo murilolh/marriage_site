@@ -1,0 +1,180 @@
+@if variable-exists(textos_cor) {
+	h3.def-subtitle {color:$textos_cor;}
+}
+#dicas {
+	.def-text > div {
+		margin-top: 16px;
+		margin-bottom: 16px;
+	}
+	.def-location ~ .def-text, .def-text ~ .def-text {
+		padding-top: 32px;
+@if variable-exists(menu_cor) {
+		border-top: $menu_cor solid thin;
+}
+		margin-top: 32px;
+	}
+
+	.formhelper-default .mt20 {
+		padding-bottom: 16px;
+	}
+}
+
+.map-address {
+  padding: 24px 8px 16px;
+}
+
+.template-messages {
+  .answer-message {
+    padding: 0px 20px 0px 20px;
+    margin: 45px 0 0 20px;
+		position: relative;
+
+    h5.answer-name {
+      display: block;
+    }
+		.data {
+			top: 0px;
+		}
+  }
+}
+
+@if variable-exists(textos_cor) {
+	.forecast-conainer,
+	.widget-forecast .forecast-list .forecast-date,
+	.widget-forecast .forecast-list .forecast-temperature .forecast-temperature-current,
+	.widget-forecast .forecast-list .forecast-temperature .forecast-temperature-range,
+	.widget-forecast .forecast-list .forecast-list-item:first-child .forecast-date,
+	.widget-forecast .forecast-signature {
+		color: $textos_cor;
+	}
+}
+
+@if variable-exists(titulos_cor) {
+	.widget-forecast .forecast-title,
+	.widget-forecast .forecast-signature a {
+		color: $titulos_cor;
+	}
+    .template-messages {
+      .answer-message {
+        border-left: 2px solid $titulos_cor;
+      }
+    }
+}
+
+@if variable-exists(titulos_cor) {
+	.enquete-v2 .def-title:before, .enquete-v2 .def-title:after {
+		border-bottom: 2px solid scale-color($titulos_cor, $alpha: -40%)!important;
+	}
+
+	.enquete-v2 {
+		border: 1px solid scale-color($titulos_cor, $alpha: -92%)!important;
+		background: scale-color($titulos_cor, $alpha: -95%)!important;
+	}
+	.enquete-v2{
+		margin-top: 25px;
+    margin-bottom: 25px;
+	}
+}
+
+.enquete-v1{
+	.percent{font-size:1.625em; position:relative;}
+	.percent:after{content:"%"; font-size:0.8em;}
+	.percent, label{position:absolute; left:50%; top:48%; -webkit-transform:translate(-50%, -50%); -moz-transform:translate(-50%, -50%); -o-transform:translate(-50%, -50%); -ms-transform:translate(-50%, -50%); transform:translate(-50%, -50%); width:100%;}
+	.chart{display:block; position:relative;}
+	.send.btn{margin-right:26px;}
+	.cnt-btn{display:block; clear:both; text-align:center;}
+	.result-message{margin:70px 0 -40px 0;}
+	.enviado{opacity:0.5;}
+	.animate-switch-container{height: 151px; overflow:hidden;}
+	header{margin-bottom:40px;}
+	li{height:151px; width:25%; display:inline-block;}
+	input[type=radio]{margin-bottom:15px; display:inline-block; width:auto;}
+	form ul, form ul li{margin-bottom:0px; text-align:center;}
+	form ul > li{text-align:center;}
+	form input, form .captcha, form li, form .select-style{line-height:inherit;}
+	form input{height:auto;}
+}
+.enquete-v1 .btn{margin-top:24px;}
+@media only screen and (max-width:414px) {
+	.enquete-v1{
+		.send.btn{margin-right:0px;}
+		.btn, li{width:100%;}
+	}
+}
+
+@media only screen and (max-width:768px) {
+	.enquete-v1 .cnt-btn {
+    margin-bottom: 32px;
+	}
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+.def-message {
+	.answer-message {
+
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		margin-top: 30px;
+    margin-bottom: 30px;
+
+		.data {
+			margin-left: auto;
+			order: 2;
+			font-size: 12px;
+		}
+		.answer-name {
+			margin-right: auto;
+			order: 1;
+		}
+		p {
+			width: 100%;
+			order: 3;
+			margin-top: 20px;
+			font-size: 13px;
+			font-style: italic;
+		}
+	}
+}
+
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+
+.remove-comma:after{
+  content:"" !important;
+}
+
+.hide_contagem_regressiva{
+  display: none !important;
+}
+
+.template39-1,.template39-2, .template39-3{
+  .hide_contagem_regressiva{
+    display: inline !important;
+    visibility: hidden !important;
+  }
+}
+
+@media only screen and (max-width:768px) {
+  .template41-1{
+    .hide_contagem_regressiva{
+      display: inline !important;
+      visibility: hidden !important;
+    }
+  }
+  .template39-1,.template39-2, .template39-3{
+    .hide_contagem_regressiva{
+      display: inline !important;
+      visibility: hidden !important;
+    }
+  }
+
+}

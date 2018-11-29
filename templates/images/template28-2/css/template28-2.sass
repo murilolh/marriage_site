@@ -1,0 +1,147 @@
+@import url("//fonts.icasei.com.br/fonts.css?use=sofia-regular-icasei");
+@import url("//fonts.icasei.com.br/fonts.css?use=opensans-regular-icasei");
+@if $nome_topo_fonte_alias != "" {
+	@import url('//fonts.icasei.com.br/fonts.css?use=#{$nome_topo_fonte_alias}');
+}
+
+@if $titulos_fonte_alias != "" {
+	@import url('//fonts.icasei.com.br/fonts.css?use=#{$titulos_fonte_alias}');
+}
+
+@if $menu_fonte_alias != "" {
+	@import url('//fonts.icasei.com.br/fonts.css?use=#{$menu_fonte_alias}');
+}
+
+@if $textos_fonte_alias != "" {
+	@import url('//fonts.icasei.com.br/fonts.css?use=#{$textos_fonte_alias}');
+}
+/*Criando padronizações*/
+/*Largura padrao do site*/
+#footer-cont, #footer-cont #powered, #header-cont, #middle-cont, #page-protected, #menu {width:940px;}
+
+/*Noivos Fonte + Cor Nome Header*/
+#header h1, .def-text h1, .def-text h2, .def-text h3, .def-text h4, .def-text h5, .def-text h6 {
+	font-family:$nome_topo_fonte_family, Arial, Helvetica, sans-serif;
+}
+#header h1, #header #days, #header #date, #days-after, .datedays, #menu ul li.select a {
+	color: $nome_topo_cor;
+}
+#header-cont #date, #header-cont #days {border:2px solid $nome_topo_cor;}
+.datedays::before, .datedays::after { background-color: $nome_topo_cor!important;}
+
+#header #date, #header #days, #days-after {font-family: Sofia Regular, Arial, Helvetica, sans-serif!important;}
+
+/* Enquete / Messages / Box */
+#enquete, .def-messages div.def-message, #middle .def-list-box {background-color:$fundo_cor; padding-bottom: 1px;}
+
+.def-message .answer-message {
+	margin-top: 10px !important;
+}
+	
+/* hr */
+#middle .def-blog-post .def-post-footer{
+	border-top:1px solid scale-color($textos_cor, $alpha: -60%)!important;
+}
+
+#enquete .def-title:before, #enquete .def-title:after {
+	border-bottom: 3px double $titulos_cor;
+}
+
+/* Menu Fonte + Cor Links*/
+#menu a {
+	font-family: $menu_fonte_family, Arial, Helvetica, sans-serif;
+}
+#menu a, .def-link {
+	color: $menu_cor;
+}
+
+/*Fonte + Cor Títulos = Cor Botões*/
+.def-title {
+	font-family: $titulos_fonte_family, Arial, Helvetica, sans-serif;
+}
+.def-title, .def-text a, .def-text h1, #menu ul li.active a, .breadcrumb-btn, .def-color, .cart-conf-boleto:hover, #list-loja .catg-products-list li .cpl-price,
+#list-loja .step-1.active, #list-loja .step-2.active, #list-loja .step-3.active, #list-loja .step-4.active, .step-by-step .step-num, .def-godp-title, .def-message .msg-from{
+	color: $titulos_cor;
+}
+
+ /*BOTOES*/
+.def-button, .def-bg {
+	color: $titulos_cor;
+	border-color: $titulos_cor;
+}
+.def-button:hover, .def-text a.def-button:hover, .def-button.active, #list-loja .catg-products-list li .cpl-btn .def-button  {
+	color: #FFF;
+	background-color: $titulos_cor;
+	border-color: $titulos_cor;
+}
+
+
+.enquete-results-bar {
+	background-color: $titulos_cor;
+}
+
+
+/* BLOG */
+/*.def-message .msg-text {background-color:scale-color($titulos_cor, $alpha: -85%)!important;}*/
+.def-message .msg-text .msg-arrow {border-bottom:10px solid scale-color($titulos_cor, $alpha: -85%)!important;}
+
+
+/*Textos gerais*/
+.def-text, #page-store, #page, #middle .template-bestman .def-title.godparents, .def-godp-title, .def-blog-post .def-title, .def-blog-post .def-blog-date, #page-store .def-text {
+	font-family: $textos_fonte_family, Arial, Helvetica, sans-serif;
+}
+#page, #footer, #footer a, .def-title.godparents, .def-post-footer, .def-post-footer a {
+	color: $textos_cor;
+}
+#middle .template-bestman .def-godp-text img, #list-loja .catg-products-list li {
+	border: 1px solid scale-color($textos_cor, $alpha: -60%);
+}
+.def-album-box ul li a {border: 1px solid $textos_cor;}
+.step-by-step .step-1, .step-by-step .step-2, .step-by-step .step-3 {border-right: 1px solid scale-color($textos_cor, $alpha: -60%);}
+
+div#menu ul li .menu-social a, #footer-cont #visit {background-color:$textos_cor!important;}
+
+/*Store*/
+#list-loja{
+	.catg-products-list li {background-color: scale-color(#FFF, $alpha: -50%)!important; /*border: 1px solid scale-color($titulos_cor, $alpha: -85%)!important;*/}
+	.catg-products-list li:hover {background-color: scale-color(#FFF, $alpha: -20%)!important; /*border: 1px solid scale-color($titulos_cor, $alpha: -55%)!important;*/}
+}
+
+#sort-store .sort-option .sort-wrap {border: 1px solid scale-color($titulos_cor, $alpha: -88%)!important;}
+#sort-store, .step-by-step {border: 1px solid scale-color($textos_cor, $alpha: -50%)!important;}
+#list-loja .catg-products-list li:hover {border: 1px solid $textos_cor;}
+
+.cart .cart-receiver, .step-by-step .active, .step-by-step .step-ok:hover {background-color: scale-color(#FFF, $alpha: -30%)!important;}
+.cart .cart-table td {border-bottom: 1px solid scale-color($titulos_cor, $alpha: -94%);}
+.cart-paymet-help, .cart-conf-wrap {background-color: scale-color(#FFF, $alpha: -40%)!important;}
+.cart-conf-boleto, .cart-conf-deposito, .cart-conf-card, .cart-conf-wrap .cart-table, .cart-conf-wrap .cart-table td  {border: 1px solid scale-color($titulos_cor, $alpha: -72%);}
+
+/*Footer #footer {background-color: scale-color(#FFF, $alpha: -60%)!important;}*/
+/*Textura/imagem Fundo + Cor Fundo*/
+
+
+#custom-bg {
+	@if $fundo_imagem != "" {
+			background:url('/userfiles/#{$login1}/#{$login}/imagens/#{$fundo_imagem}') no-repeat center fixed $fundo_cor;
+			background-size: cover;
+			filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/userfiles/#{$login1}/#{$login}/imagens/#{$fundo_imagem}', sizingMethod='scale');
+			-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/userfiles/#{$login1}/#{$login}/imagens/#{$fundo_imagem}', sizingMethod='scale')";
+	} @else if $fundo_pattern != "" {
+		background:url('/assets/templates/pattern/#{$fundo_pattern}') repeat center fixed $fundo_cor;
+	} @else {
+		background-color: $fundo_cor;
+	}
+}
+
+/* LOADER */
+body > div.global-loading > div.global-loading-progress {background-color:scale-color($nome_topo_cor, $alpha: 0%); border:0px!important; }
+body > div.global-loading { position: fixed; top: 0; left: 0; display: none; z-index: 2000; background-color: scale-color($nome_topo_cor, $alpha: -80%);}
+
+/* aplica somente a partir de 360px */
+@media screen and (max-width:640px) {
+	/*Customizações 28*/
+	#middle .template-messages .def-messages .def-message .msg-from{border-bottom:1px solid $nome_topo_cor}
+	#middle .def-list-box {background-color:none!important;}
+	div#menu ul li .menu-social a{background: url(/assets/templates/svg/SocialIcons.svg) $nome_topo_cor!important;}
+}
+div#menu ul li .menu-social a {background-image: url(/assets/templates/svg/SocialIcons.svg)!important;}

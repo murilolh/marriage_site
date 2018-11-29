@@ -1,0 +1,77 @@
+@if $nome_topo_fonte_alias != "" {
+	@import url('//fonts.icasei.com.br/fonts.css?use=#{$nome_topo_fonte_alias}');
+}
+
+@if $titulos_fonte_alias != "" {
+	@import url('//fonts.icasei.com.br/fonts.css?use=#{$titulos_fonte_alias}');
+}
+
+@if $menu_fonte_alias != "" {
+	@import url('//fonts.icasei.com.br/fonts.css?use=#{$menu_fonte_alias}');
+}
+
+@if $textos_fonte_alias != "" {
+	@import url('//fonts.icasei.com.br/fonts.css?use=#{$textos_fonte_alias}');
+}
+
+/* Noivos Fonte + Cor Nome Header*/
+#header h1, #header #date, #header #days, #days-after {
+	font-family: $nome_topo_fonte_family, Arial, Helvetica, sans-serif;
+}
+#header h1, #header #days, #header #date, #days-after {
+	color: $nome_topo_cor;
+}
+
+/* Menu Fonte + Cor Links*/
+#menu a {
+	font-family: $menu_fonte_family, Arial, Helvetica, sans-serif;
+}
+#menu a, .def-link {
+	color: $menu_cor;
+}
+	
+/*Fonte + Cor Títulos = Cor Botões*/
+.def-title, #footer {
+	font-family: $titulos_fonte_family, Arial, Helvetica, sans-serif; 
+}	
+.def-title, .def-text a, .def-text h1, #menu ul li.active a, .breadcrumb-btn, .def-color, #menu ul li .def-title {
+	color: $titulos_cor;
+}
+.def-button, .def-bg, .enquete-results-bar {
+	background-color: $titulos_cor;
+}
+	
+/*Textos gerais*/
+.def-text, #page-store, #page {
+	font-family: $textos_fonte_family, Arial, Helvetica, sans-serif;
+}
+#page {
+	color: $textos_cor;
+}
+
+/*Textura/imagem Fundo + Cor Fundo*/
+
+#custom-bg {
+	@if $fundo_imagem != "" {
+			background:url('/userfiles/#{$login1}/#{$login}/imagens/#{$fundo_imagem}') no-repeat center fixed $fundo_cor;
+			background-size: cover;
+			filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/userfiles/#{$login1}/#{$login}/imagens/#{$fundo_imagem}', sizingMethod='scale');
+			-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/userfiles/#{$login1}/#{$login}/imagens/#{$fundo_imagem}', sizingMethod='scale')";    
+	} @else if $fundo_pattern != "" {
+		background:url('/assets/templates/pattern/#{$fundo_pattern}') repeat center fixed $fundo_cor;
+	} @else {
+		background-color: $fundo_cor;
+	}
+}
+div#menu ul li .menu-social{
+	a.facebook, a.twitter, a.pinterest{background:$titulos_cor url(/assets/templates/svg/SocialIcons.svg) no-repeat!important;}
+	a.facebook{background-position:1px -117px!important;}
+	a.twitter {background-position:-37px -117px!important;}
+	a.pinterest {background-position:-75px -117px!important; margin-right:0px!important;}
+}
+@media screen and (max-width:640px) {
+	#middle .template-messages .def-messages .def-message .msg-from{border-bottom:1px solid $nome_topo_cor}
+	#middle .def-list-box {background-color:none!important;}
+	#menu ul li.select{border-left:4px solid $titulos_cor!important; padding-left:16px;}
+	#menu{background-color: adjust-color($titulos_cor, $lightness:-22%)!important;}
+}
